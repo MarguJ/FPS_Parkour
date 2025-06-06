@@ -5,12 +5,12 @@ using UnityEngine;
 public class MercanciaScript : MonoBehaviour
 {
     public int scorePoints;
-
+    public MoneyManager manager;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")
         {
-            Destroy(gameObject);
+            manager.UpdateMoney(100);
         }
     }
 }
