@@ -1,14 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class MoneyManager : MonoBehaviour
-{   
-    public float money;
-    public TextMeshProUGUI moneyAmount;
-    public void UpdateMoney(float amount)
+{
+    public float playerMoney;
+    public UIManager uiManager;
+
+    void Start()
     {
-        money =- amount;
+        uiManager.UpdateMoneyUI(playerMoney.ToString());
+    }
+
+    public bool UpdateMoney(float amount)
+    {
+
+        if (playerMoney + amount < 0)
+        {
+            return false;
+        }
+        else
+        {
+            playerMoney += amount;
+            uiManager.UpdateMoneyUI(playerMoney.ToString());
+            return true;
+        }
     }
 }
