@@ -15,8 +15,8 @@ public class MercanciaScript : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
-            if (dineroManager.UpdateMoney(-precio))
+        {   
+            if (dineroManager.playerMoney >= precio)
             {
                 Destroy(gameObject);
             }

@@ -14,7 +14,6 @@ public class MoneyManager : MonoBehaviour
 
     public bool UpdateMoney(float amount)
     {
-
         if (playerMoney + amount < 0)
         {
             return false;
