@@ -18,6 +18,7 @@ public class MercanciaScript : MonoBehaviour
         {   
             if (dineroManager.playerMoney >= precio)
             {
+                dineroManager.UpdateMoney(precio);
                 Destroy(gameObject);
             }
         }

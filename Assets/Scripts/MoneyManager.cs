@@ -9,19 +9,19 @@ public class MoneyManager : MonoBehaviour
 
     void Start()
     {
-        uiManager.UpdateMoneyUI(playerMoney.ToString());
+        uiManager.UpdateInfoUI(playerMoney.ToString());
     }
 
     public bool UpdateMoney(float amount)
     {
-        if (playerMoney + amount < 0)
+        if (playerMoney - amount < 0)
         {
             return false;
         }
         else
         {
-            playerMoney += amount;
-            uiManager.UpdateMoneyUI(playerMoney.ToString());
+            playerMoney -= amount;
+            uiManager.UpdateInfoUI(playerMoney.ToString());
             return true;
         }
     }

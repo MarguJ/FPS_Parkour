@@ -5,10 +5,10 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI txtMoney;
+    public TextMeshProUGUI txtInfo;
 
-    public void UpdateMoneyUI(string moneyAmount)
+    public void UpdateInfoUI(string amount)
     {
-        txtMoney.text = moneyAmount;
+        txtInfo.text = "Dinero: $" + amount + "/n Holaa";
     }
 }
