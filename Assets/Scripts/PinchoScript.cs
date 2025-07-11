@@ -9,7 +9,7 @@ public class PinchoScript : MonoBehaviour
     public float daño;
     void Start()
     {
-        
+        vidaManager = FindObjectOfType<HealthManager>();
     }
     void OnCollisionEnter(Collision collision)
     {
