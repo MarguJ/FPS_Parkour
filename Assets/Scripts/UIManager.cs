@@ -9,6 +9,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateInfoUI(string amount)
     {
-        txtInfo.text = "Dinero: $" + amount + " \nVida: " + amount;
+        txtInfo.text = "Dinero: $" + amount;
     }
 }

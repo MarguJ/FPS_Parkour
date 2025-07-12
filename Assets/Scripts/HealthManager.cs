@@ -5,18 +5,20 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public float playerHealth;
-    public UIManager uiManager;
+    public UIManager2 uiManager2;
+
     void Start()
     {
-        uiManager.UpdateInfoUI(playerHealth.ToString());
+        uiManager2.UpdateHealthUI(playerHealth.ToString());
     }
 
     public bool UpdateHealth(float daño)
     {
-        if(playerHealth <= daño)
+        if(playerHealth >= daño)
         {
             playerHealth -= daño;
-            uiManager.UpdateInfoUI(playerHealth.ToString());
+            Debug.Log(playerHealth);
+            uiManager2.UpdateHealthUI(playerHealth.ToString());
             return true;
         }
         else

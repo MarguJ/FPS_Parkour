@@ -15,7 +15,7 @@ public class PinchoScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (vidaManager.playerHealth >= daño)
+            if (vidaManager.playerHealth > daño)
             {
                 vidaManager.UpdateHealth(daño);
             }

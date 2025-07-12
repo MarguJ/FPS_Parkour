@@ -15,10 +15,10 @@ public class RestartSceneOnFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Respawned");
         if (transform.position.y < deathFallHeight)
         {
             SceneManager.LoadScene("FPS Parkour");
+            Debug.Log("Respawned");
         }
     }
 }
